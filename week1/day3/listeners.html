@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+</head>
+<body>
+    <h1 id="my-h1">Event Listeners</h1></hr>
+    <button id="btn1">Click Me</button>
+    <script>
+        let button1 = document.getElementById("btn1");
+
+        button1.addEventListener("click", onClickHandler);
+
+        function onClickHandler() {
+            alert("I've been clicked");
+            document.getElementById("my-h1").innerHTML="This is Changed";
+        }
+    </script>
+</body>
+</html>

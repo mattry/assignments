@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Demo</title>
+    <script>
+        function elementInsert() {
+            let newElement = document.createElement("div");
+            newElement.innerHTML = "<p>Hello There ...</p>"
+            let parent = document.getElementById("first-h1");
+            parent.append(newElement);
+        }
+    </script>
+</head>
+<body>
+    <h2 id="first-h1">Inserting Elements</h2>
+    <button onclick="elementInsert()">Insert Element</button>
+</body>
+</html>

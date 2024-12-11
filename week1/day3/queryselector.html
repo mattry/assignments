@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector Demo</title>
+    <script>
+        function changeFirstPara() {
+            let x = document.querySelector("p");
+            x.style.backgroundColor = "blue";
+        }
+        function changeAll() {
+            let x = document.querySelectorAll("p");
+            x.forEach((p) => {
+                p.style.backgroundColor = "red";
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Query Selector Demo</h1><hr/>
+    <p>This is a para</p>
+    <p>This is a para</p>
+    <p>This is a para</p>
+    <button onclick="changeFirstPara()">Change First</button>
+    <button onclick="changeAll()">Change All</button>
+</body>
+</html>

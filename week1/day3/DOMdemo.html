@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Demo</title>
+    <script>
+        function handleButtonClick() {
+            // creates a collection of elements
+            //let x = document.getElementsByTagName("p");
+            let x = document.getElementsByClassName("p1");
+            // iterate through the elements to access each <p>
+            for (let i = 0; i < x.length; i++) {
+                //alert(x[i].innerHTML);
+                x[i].style.backgroundColor="red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>This is a DOM Demo</h1><hr/>
+    <p class="p1">First para</p>
+    <p class="p1">Second para</p>
+    <button onclick="handleButtonClick()">Click Me</button>
+</body>
+</html>

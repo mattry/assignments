@@ -1,0 +1,25 @@
+* {
+    text-align: center;
+}
+
+li{
+    list-style: none;
+}
+
+button {
+    margin-left: 10px;
+}
+
+.completed-button{
+    color: white;
+    background-color: green;
+}
+
+.remove-button{
+    color: white;
+    background-color: red;
+}
+
+.completed-item{
+    text-decoration: line-through;
+}

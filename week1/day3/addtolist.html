@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <script>
+        function addItem() {
+            let list = document.getElementById("my-ul");
+            let input = document.getElementById("text1")
+            let content = input.value;
+            const listItem = document.createElement("li");
+            listItem.innerText = content;
+            list.appendChild(listItem);
+            input.value="";
+            input.focus();
+        }
+    </script>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <input type="text" id="text1" />
+    <button onclick="addItem()">Add to List</button>
+    <hr/>
+    <ul id ="my-ul">
+        <li>Pay the bills</li>
+    </ul>
+    
+</body>
+</html>
