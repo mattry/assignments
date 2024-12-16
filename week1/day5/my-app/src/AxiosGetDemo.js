@@ -13,10 +13,10 @@ const AxiosGetDemo = () => {
         })
         .catch(error => {
             console.error("Error fetching posts: ", error);
-        })
-    }),[];
+        });
+    }, []);
 
-    return(
+    return (
         <DisplayPost posts={posts} />
     );
 }

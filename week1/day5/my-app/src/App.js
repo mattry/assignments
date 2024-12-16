@@ -1,25 +1,27 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Hello from './Hello';
-import ListAndKeys from './ListAndKeys';
-import EventDemo from './eventsdemo';
-import PostDemo from './postDemo';
+import NavBar from './NavBar';
 import StateDemo from './statedemo';
+import EventDemo from './eventsdemo';
+import ToDoList from './ToDoComponents/ToDoList';
+
 
 function App() {
   let message = "Hello from a variable"
   return (
-    <div className="App">
-      <h2>Hello React</h2>
-      <p>This is a paragraph written with JSX. Inside the <code>App.js</code> file</p>
-      <h3>{message}</h3>
-      <Hello name="Matt" age="29"/>
-      <EventDemo />
-      <StateDemo />
-      <hr/>
-      <PostDemo />
-      <hr/>
-      <ListAndKeys />
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar />
+      </div>
+      <Routes>
+        <Route path="/hello" element={<Hello name="Matt"/>} />
+        <Route path="/sdc" element={<StateDemo />} />
+        <Route path="/edc" element={<EventDemo />} />
+        <Route path="/todo" element={<ToDoList />} />
+      </Routes>
+    </Router>
+
   );
 }
 
