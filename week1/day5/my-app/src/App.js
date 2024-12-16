@@ -1,5 +1,6 @@
 import './App.css';
 import Hello from './Hello';
+import ListAndKeys from './ListAndKeys';
 import EventDemo from './eventsdemo';
 import PostDemo from './postDemo';
 import StateDemo from './statedemo';
@@ -16,6 +17,8 @@ function App() {
       <StateDemo />
       <hr/>
       <PostDemo />
+      <hr/>
+      <ListAndKeys />
     </div>
   );
 }

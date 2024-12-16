@@ -11,7 +11,7 @@ const PostDemo = () => {
             <h2>These are the post's comments:</h2>
             <ul>
                 {comments.map(comment => (
-                    <CommentDemo comment={comment} />
+                    <CommentDemo key={comment} comment={comment} />
                 ))}
             </ul>
         </>
