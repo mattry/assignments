@@ -6,7 +6,7 @@ const AxiosGetDemo = () => {
     
     const [posts, setPosts] = useState([]);
 
-    useState(() => {
+    useEffect(() => {
         axios.get("http://localhost:8000/posts")
         .then(response => {
             setPosts(response.data);
@@ -14,7 +14,7 @@ const AxiosGetDemo = () => {
         .catch(error => {
             console.error("Error fetching posts: ", error);
         })
-    });
+    },[]);
 
     return(
         <DisplayPost posts={posts} />
